@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.5;
+    color:white;
+    background-color: pink;
+    min-height: 100vh;
+    margin:0;
+    padding:0;
+    overflow-x: none;
+}
+
+p{
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.8;
+    color:white;
+    margin:0;
+}
+
+h4{
+    margin: 15px 0;
+}
+
+.shop{
+    position: relative;
+    z-index: 10;
+    display:block;
+    cursor:pointer;
+}
+
+.btn{
+    position: relative;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 2;
+    border-radius: 4px;
+    color:white;
+    text-decoration: none;
+    cursor:pointer;
+    box-shadow: 0 6px 15px 0 rgb(20,40,100);
+    padding:10px;
+    background-color: rgb(197, 121, 134);
+    height: 100px;
+    top: 75%;
+    left: 80%;
+}
+
+.btn:hover{
+    background-color: rgb(136, 77, 87);
+}
+
+.nav{
+    margin:40px;
+    margin-top:10px;
+}
+
+.logo{
+    font-size: 3rem;
+}
+
+.section{
+    position: relative;
+    max-width: calc(100% - 40px);
+    width:860px;
+    margin:0 auto;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: 100px 0;
+}
+
+.info{
+    position: relative;
+    margin-left: 500px;
+    z-index: 15;
+    display: block;
+    text-align: left;
+}
+
+.small-title{
+    font-weight:700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 13px;
+    line-height: 1.2;
+    color:white;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+[type="radio"]:checked,
+[type="radio"]:not(:checked){
+    position: absolute;
+    visibility: hidden;
+}
+
+.desc-btn:checked + label,
+.desc-btn:not(:checked) + label{
+    position: relative;
+    transition: all 200ms linear;
+    display: inline-block;
+    cursor: pointer;
+    font-weight: 600;
+    font-size:20px;
+    line-height: 1.2;
+    margin-right: 20px;
+    opacity: 1;
+}
+
+.desc-btn:checked + label{
+    opacity: 1;
+}
+
+.desc-btn:not(:checked) + label{
+    opacity: 0.5;
+}
+
+.desc-btn:not(:checked) + label:hover{
+    opacity: 0.8;
+}
+
+.desc-text{
+    padding-top: 20px;
+    padding-bottom: 30px;
+    transition: all 250ms linear;
+    opacity: 0;
+    overflow: hidden;
+    pointer-events: none;
+    transform: translateY(20px);
+    position: relative;
+    width: 100%;
+    display:block;
+}
+
+.desc-text.measurements{
+    position: absolute;
+    top: 60%;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+#desc-1:checked ~ .desc-text.description{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+#desc-2:checked ~ .desc-text.measurements{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.inline{
+    position: relative;
+    margin-right: 20px;
+    display:inline-block;
+}
+
+.strikeout{
+    text-decoration: line-through;
+    color:gray;
+    opacity: 0.5;
+}
+
+.img-wrap{
+    position: absolute;
+    top:100px;
+    left: 0;
+    width: 500px;
+    height: 410px;
+    display: inline-block;
+    z-index: 10;
+    transition: all 550ms linear;
+    transition-delay: 100ms;
+    background-position: center top;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-image: url('https://assets.codepen.io/1462889/ch1.png');
+}
